@@ -51,14 +51,14 @@ public class OrderController {
     public void deleteOrder(@PathVariable Long id) {
         orderService.deleteOrder(id);
     }
-    @GetMapping("/items/{query}")
-    public List<Order> searchOrdersByItem(@PathVariable String query) {
+
+    @GetMapping("/items")
+    public List<Order> searchOrdersByItem(@RequestParam String query) {
         return orderService.searchOrdersByItem(query);
     }
 
-    @GetMapping("/customers/{query}")
-    public List<Order> searchOrdersByCustomer(@PathVariable String query) {
+    @GetMapping("/customers")
+    public List<Order> searchOrdersByCustomer(@RequestParam String query) {
         return orderService.searchOrdersByCustomer(query);
     }
-
 }

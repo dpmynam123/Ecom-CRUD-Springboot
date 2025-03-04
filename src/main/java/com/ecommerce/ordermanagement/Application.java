@@ -2,12 +2,11 @@ package com.ecommerce.ordermanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.web.config.EnableSpringDataWebSupport;
 
 @SpringBootApplication
-public class OrderManagementApplication {
-
+public class Application {
 	public static void main(String[] args) {
-		SpringApplication.run(OrderManagementApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
-
 }
